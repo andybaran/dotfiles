@@ -169,3 +169,12 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+function abc-tauofdevops() {
+
+echo 'DevOps is Communication, Responsibility and Capability'
+echo 'DevOps oldest and best tool is email'
+echo 'DevOps is about communicating share of capabilities and responsibilities'
+echo 'DevOps tools provide interfaces that communicate the capabilities the tool provides, and allow the user augment their capabilities and to communicate their responsibility for the tools usage'
+
+}
