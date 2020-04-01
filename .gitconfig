@@ -1,7 +1,27 @@
 [alias]
-
+	a      = add
+	aa     = add -A
+	bv     = branch -avv
+	co     = checkout
+	c      = commit
+	cm     = commit -m
+	cl     = clone 
+	ca     = commit -a
+	cam    = commit -a -m
+	pom    = push origin master
+	psom   = push --set-upstream origin master
+	p      = push
+	d      = diff
+	ds     = diff --stat
+	l      = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	l1     = log --pretty=oneline
+	s      = status
+	ssl    = config --global --replace-all http.sslVerify true
+	nossl  = config --global --replace-all http.sslVerify false
+	ci     = ci-status -v
+	cb     = clone --bare
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
-	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	#l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
 	# View the current working tree status using the short format
 	s = status -s
@@ -13,10 +33,7 @@
 	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
 
 	# Pull in remote changes for the current repository and all its submodules
-	p = git pull --recurse-submodules
-
-	# Clone a repository including all submodules
-	c = clone --recursive
+	pu = git pull
 
 	# Commit all changes
 	ca = !git add -A && git commit -av
@@ -188,3 +205,34 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+[hub]
+protocol = https
+
+[color]
+ui = auto
+
+[user]
+name = Adam Buxton
+email = buxton.adam@gmail.com
+
+[github]
+user = abuxton
+
+[credential]
+
+[core]
+[credential]
+	helper = osxkeychain
+[merge "theirs"]
+	driver = false
+[merge "ours"]
+	driver = true
+[secrets]
+	providers = git secrets --aws-provider
+	patterns = (A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}
+	patterns = (\"|')?(AWS|aws|Aws)?_?(SECRET|secret|Secret)?_?(ACCESS|access|Access)?_?(KEY|key|Key)(\"|')?\\s*(:|=>|=)\\s*(\"|')?[A-Za-z0-9/\\+=]{40}(\"|')?
+	patterns = (\"|')?(AWS|aws|Aws)?_?(ACCOUNT|account|Account)_?(ID|id|Id)?(\"|')?\\s*(:|=>|=)\\s*(\"|')?[0-9]{4}\\-?[0-9]{4}\\-?[0-9]{4}(\"|')?
+	allowed = AKIAIOSFODNN7EXAMPLE
+	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+[init]
+	templateDir = /Users/abuxton/.git-templates/git-secrets
