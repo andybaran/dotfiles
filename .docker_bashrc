@@ -1,0 +1,46 @@
+alias docker-up='open /Applications/docker.app'
+alias docker-volumerm='docker volume ls -q|xargs docker volume rm'
+alias docker-stop='docker ps -aq|xargs docker stop'
+alias docker-rm='docker ps -aq|xargs docker rm -f'
+alias docker-kill='docker ps -q | xargs docker kill '
+alias docker-ld='lazydocker'
+
+
+ function dex-fn {
+    docker exec -it $1 ${2:-bash}
+ }
+
+ 
+
+ function drun-fn {
+    docker run -it $1 $2
+ }
+
+ function dsr-fn {
+    docker stop $1;docker rm $1
+ }
+
+function drmc-fn {
+    docker rm $(docker ps --all -q -f status=exited)
+}
+
+function drmid-fn {
+    imgs=$(docker images -q -f dangling=true)
+    [ ! -z "$imgs" ] && docker rmi "$imgs" || echo "no dangling images."
+}
+
+# in order to do things like dex $(dlab label) sh
+function dlab {
+    docker ps --filter="label=$1" --format="{{.ID}}"
+}
+
+
+alias docker-down="docker-compose down"
+alias docker-ex=dex-fn
+alias docker-names=dnames-fn
+alias docker-ps="docker ps"
+alias docker-psa="docker ps -a"
+alias docker-rmc=drmc-fn
+alias docker-rmid=drmid-fn
+alias docker-run=drun-fn
+alias docker-sr=dsr-fn
