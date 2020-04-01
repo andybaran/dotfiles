@@ -146,3 +146,33 @@ alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+#### 
+
+alias icanhazip="curl http://ipv4.icanhazip.com/"
+alias gg="env GIT_SSL_NO_VERIFY=true"
+#alias g="git" #cos I is lazy!
+alias gb='export BRANCH=$(git rev-parse --abbrev-ref HEAD)'
+alias g="hub" #cos I is lazy!
+alias galias='cat ~/.gitconfig'
+alias cask="brew cask"
+alias newhope="telnet towel.blinkenlights.nl"
+alias abc-date='date +"%d-%m-%y" '
+alias abc-datestamp='date +"%d%m%Y" '
+alias ll='ls -la'
+alias lr='ls -R'
+alias json_parser='echo "cat /path/to/file | json_pp"'
+alias dcs='~/dcs'
+
+alias envs='env | sort'
+alias atom='open . -a atom'
+alias envs='env | sort'
+alias osx-reset='killall Dock'
+#alias vcs='open . -a "Visual Studio Code"' #https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
+alias open-code='code .'
+alias src='cd ~/src'
+alias abc-netstat='netstat tulpn'
+alias weather='curl wttr.in'
+alias weather-lon='curl wttr.in/London'
+alias glr="curl -s https://api.github.com/users/abuxton/repos | jq '.[]|.html_url\' "
+alias gls='curl -s https://api.github.com/'
