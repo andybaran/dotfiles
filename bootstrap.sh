@@ -18,6 +18,9 @@ function doIt() {
 function makeItHappen () {
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
+function nodeKnows(){
+	npm i add-gitignore  #https://github.com/TejasQ/add-gitignore
+}
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt;
 else
@@ -26,6 +29,7 @@ else
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
 		makeItHappen;
 		doIt;
+                nodeKnows;
 	fi;
 fi;
 unset doIt;
