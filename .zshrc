@@ -1,6 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/opt/local/bin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/abuxton/.oh-my-zsh"
@@ -8,7 +7,7 @@ export ZSH="/Users/abuxton/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="random"
 #ZSH_THEME="simple"
@@ -63,7 +62,7 @@ ENABLE_CORRECTION="true"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-HIST_STAMPS="dd.mm.yyyy"
+HIST_STAMPS="dd/mm/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -102,49 +101,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cheatsheet='curl cheat.sh'
-alias cs='cheatsheet'
-alias csl='curl cheat.sh/~list'
-alias g='hub'
-alias icanhazip="curl http://ipv4.icanhazip.com/"
-alias cask="brew cask"
-alias newhope="telnet towel.blinkenlights.nl"
-alias my-date='date +"%d-%m-%y" '
-alias my-datestamp='date +"%d%m%Y" '
-alias hint-json_parser='echo "cat /path/to/file | json_pp"'
-alias envs='env | sort'
-alias my-netstat='netstat tulpn'
-alias weather='curl wttr.in'
-alias weather-lon='curl wttr.in/London'
-alias glr="curl -s https://api.github.com/users/abuxton/repos | jq '.[]|.html_url\' "
-alias gls='curl -s https://api.github.com/'
-# TIL
-alias lfs='man hier'
-
-export AWS_REGION=eu-west-1
-export AWS_CONFIG_FILE=~/.aws/config
-alias aws_set='export AWS_REGION=eu-west-1'
-alias aws_unset='unset AWS_REGION'
-
-#if [[ -f ~/.puppet_bashrc ]]; then
-#source ~/.puppet_bashrc
-#fi
-if [ -f ~/.docker_bashrc ]; then
-source ~/.docker_bashrc
-fi
-if [ -f ~/.python_bashrc ]; then
-source ~/.python_bashrc
-fi
-if [ -f ~/.vagrant_bashrc ]; then
-source ~/.vagrant_bashrc
-fi
-if [ -f ~/.go_bashrc ]; then
-source ~/.go_bashrc
-fi
-if [ -f ~/.ruby_bashrc ]; then
-source ~/.ruby_bashrc
-fi
-export PATH="/usr/local/sbin:$PATH"
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
