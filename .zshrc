@@ -101,3 +101,25 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# if [[ -f ~/.puppet_bashrc ]]; then
+# source ~/.puppet_bashrc
+# fi
+if [ -f ~/.docker_bashrc ]; then
+source ~/.docker_bashrc
+fi
+if [ -f ~/.python_bashrc ]; then
+source ~/.python_bashrc
+fi
+if [ -f ~/.vagrant_bashrc ]; then
+source ~/.vagrant_bashrc
+fi
+if [ -f ~/.go_bashrc ]; then
+source ~/.go_bashrc
+fi
+if [ -f ~/.ruby_bashrc ]; then
+source ~/.ruby_bashrc
+fi
+export PATH="/usr/local/sbin:$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
