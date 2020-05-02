@@ -1,18 +1,18 @@
-# if [[ -f ~/.puppet_bashrc ]]; then
-#   source ~/.puppet_bashrc
+# if [[ -f ~/.puppet_profile ]]; then
+#   source ~/.puppet_profile
 # fi
-if [ -f ~/.docker_bashrc ]; then
-  source ~/.docker_bashrc
+if [ -f ~/.docker_profile ]; then
+  source ~/.docker_profile
 fi
-if [ -f ~/.python_bashrc ]; then
-  source ~/.python_bashrc
+if [ -f ~/.python_profile ]; then
+  source ~/.python_profile
 fi
-if [ -f ~/.vagrant_bashrc ]; then
-  source ~/.vagrant_bashrc
+if [ -f ~/.vagrant_profile ]; then
+  source ~/.vagrant_profile
 fi
-if [ -f ~/.go_bashrc ]; then
-  source ~/.go_bashrc
+if [ -f ~/.go_profile ]; then
+  source ~/.go_profile
 fi
-if [ -f ~/.ruby_bashrc ]; then
-  source ~/.ruby_bashrc
+if [ -f ~/.ruby_profile ]; then
+  source ~/.ruby_profile
 fi
