@@ -178,4 +178,4 @@ alias glr="curl -s https://api.github.com/users/abuxton/repos | jq '.[]|.html_ur
 alias gls='curl -s https://api.github.com/'
 
 # lazy admin
-alias monitor="open -a Activity\ Monitor"
+alias monitor="htop && open -a Activity\ Monitor"
