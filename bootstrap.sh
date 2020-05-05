@@ -20,7 +20,9 @@ function makeItHappen () {
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
 function nodeKnows(){
+if ! [ -x "$(command -v add-gitignore)" ]; then
 	cd $HOME && npm i -g add-gitignore  #https://github.com/TejasQ/add-gitignore
+fi
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt;
