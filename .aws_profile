@@ -1,3 +1,4 @@
+ export AWS_PROFILE=tg_user
  export AWS_DEFAULT_REGION=eu-west-2
 
 function aws_export() {
