@@ -1,0 +1,33 @@
+ export AWS_DEFAULT_REGION=eu-west-2
+
+function aws_export() {
+	if test -z  "$AWS_PROFILE"
+	then
+	 	aws_credentials
+	else
+		read 'AWS_PROFILE: ' aws_profile_var
+		export AWS_PROFILE=$aws_profile_var
+		aws_credentials
+	fi;
+
+}
+
+function aws_credentials {
+	INI_FILE=~/.aws/credentials
+
+	while IFS=' = ' $AWS_PROFILE
+	do
+		if [[ $key == \[*] ]]; then
+			section=$key
+		elif [[ $value ]] && [[ $section == '[default]' ]]; then
+			if [[ $key == 'aws_access_key_id' ]]; then
+				AWS_ACCESS_KEY_ID=$value
+			elif [[ $key == 'aws_secret_access_key' ]]; then
+				AWS_SECRET_ACCESS_KEY=$value
+			fi
+		fi
+	done < $INI_FILE
+
+	echo $AWS_ACCESS_KEY_ID
+	echo $AWS_SECRET_ACCESS_KEY
+}
