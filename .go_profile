@@ -11,6 +11,11 @@ export PATH=$PATH:$GOPATH/bin:$GOBIN
 #export GOPATH='/usr/local/bin/go
 #export PATH=${GOPATH//://bin:}/bin:$PATH
 
+# https://github.com/golang/lint
 if ! [ -x "$(command -v golint)" ]; then
 	go get -u golang.org/x/lint/golint
+fi
+# https://github.com/mattn/gom
+if ! [ -x "$(command -v gom)" ]; then
+  go get github.com/mattn/gom
 fi
