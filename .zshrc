@@ -73,7 +73,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(aws docker git helm kubectl terraform thefuck vscode z zsh_reload )
-Export ZSH_PLUGINS=plugins
+export ZSH_PLUGINS=plugins
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
