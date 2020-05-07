@@ -3,7 +3,10 @@
 #https://gist.github.com/vsouza/77e6b20520d07652ed7d
 export GOPATH=$HOME/golang
 export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+export GOBIN=$GOROOT/bin
+export PATH=$PATH:$GOPATH/bin:$GOBIN
+
+
 
 #export GOPATH='/usr/local/bin/go
 #export PATH=${GOPATH//://bin:}/bin:$PATH
