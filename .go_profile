@@ -1,4 +1,3 @@
-
 #/usr/local/bin/go
 #https://gist.github.com/vsouza/77e6b20520d07652ed7d
 export GOPATH=$HOME/golang
