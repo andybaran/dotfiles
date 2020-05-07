@@ -147,7 +147,7 @@ alias reload="exec ${SHELL} -l"
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
-#### 
+####
 
 alias icanhazip="curl http://ipv4.icanhazip.com/"
 alias gg="env GIT_SSL_NO_VERIFY=true"
@@ -179,3 +179,5 @@ alias gls='curl -s https://api.github.com/'
 
 # lazy admin
 alias monitor="htop && open -a Activity\ Monitor"
+alias tg='terragrunt'
+alias tf='terraform'

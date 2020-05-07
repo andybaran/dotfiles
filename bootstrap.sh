@@ -32,7 +32,7 @@ else
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
 		makeItHappen;
 		doIt;
-        nodeKnows;
+    nodeKnows;
 	fi;
 fi;
 unset doIt;
