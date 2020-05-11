@@ -1,3 +1,5 @@
+# https://stackoverflow.com/a/53199639/2362673
+
  export AWS_PROFILE=tg_user
  export AWS_DEFAULT_REGION=eu-west-2
 
@@ -14,21 +16,8 @@ function aws_export() {
 }
 
 function aws_credentials {
-	INI_FILE=~/.aws/credentials
-
-	while IFS=' = ' $AWS_PROFILE
-	do
-		if [[ $key == \[*] ]]; then
-			section=$key
-		elif [[ $value ]] && [[ $section == '[default]' ]]; then
-			if [[ $key == 'aws_access_key_id' ]]; then
-				AWS_ACCESS_KEY_ID=$value
-			elif [[ $key == 'aws_secret_access_key' ]]; then
-				AWS_SECRET_ACCESS_KEY=$value
-			fi
-		fi
-	done < $INI_FILE
-
+	export AWS_ACCESS_KEY_ID=$(aws configure get my_profile.aws_access_key_id)
 	echo $AWS_ACCESS_KEY_ID
+	export AWS_SECRET_ACCESS_KEY=$(aws configure get my_profile.aws_secret_access_key)
 	echo $AWS_SECRET_ACCESS_KEY
 }

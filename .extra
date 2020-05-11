@@ -16,3 +16,6 @@ fi
 if [ -f ~/.ruby_profile ]; then
   source ~/.ruby_profile
 fi
+if [ -f ~/.aws_profile ]; then
+  source ~/.aws_profile
+fi
