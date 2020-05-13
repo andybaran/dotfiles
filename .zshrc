@@ -72,7 +72,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aws docker git helm kubectl terraform thefuck vscode z zsh_reload )
+plugins=(aws docker git helm kubectl terraform thefuck vagrant vscode z zsh_reload )
 export ZSH_PLUGINS=$plugins
 source $ZSH/oh-my-zsh.sh
 

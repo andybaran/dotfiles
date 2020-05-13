@@ -2,20 +2,26 @@
 #   source ~/.puppet_profile
 # fi
 if [ -f ~/.docker_profile ]; then
-  source ~/.docker_profile
+	echo "docker!"
+	source ~/.docker_profile
 fi
 if [ -f ~/.python_profile ]; then
-  source ~/.python_profile
+	echo "python!"
+	source ~/.python_profile
 fi
 if [ -f ~/.vagrant_profile ]; then
-  source ~/.vagrant_profile
+	echo "vagrant!"
+	source ~/.vagrant_profile
 fi
 if [ -f ~/.go_profile ]; then
-  source ~/.go_profile
+echo "go!"
+	source ~/.go_profile
 fi
 if [ -f ~/.ruby_profile ]; then
+echo "ruby!"
   source ~/.ruby_profile
 fi
 if [ -f ~/.aws_profile ]; then
-  source ~/.aws_profile
+	echo "aws!"
+	source ~/.aws_profile
 fi
