@@ -1,0 +1,4 @@
+function hashiqube() {
+cd ~/hashiqube
+vagrant up && vagrant up --provision-with terraform-enterprise
+}
