@@ -1,4 +1,39 @@
 function hashiqube() {
 cd ~/hashiqube
 vagrant up && vagrant up --provision-with terraform-enterprise
+
+if [ ! -f '/etc/resolver/consul']
+sudo cat <<EOF > /etc/resolver/consul
+nameserver 10.9.99.10
+port 8600
+EOF
+
 }
+
+
+function hashicorp_health() {
+
+consul members
+vault status
+consul license get
+vault read sys/license
+terraform version
+
+}
+# export CONSUL_HTTP_ADDR=https://10.9.99.10:8501
+# export CONSUL_CACERT=/etc/consul.d/tls/consul-agent-ca.pem
+# export CONSUL_CLIENT_CERT=/etc/consul.d/tls/na2-client-vault-1.pem
+# export CONSUL_CLIENT_KEY=/etc/consul.d/tls/na2-client-vault-1-key.pem
+# export CONSUL_HTTP_TOKEN=1179c57e-4dc8-bfd7-8a38-0045c7853dd0
+# export VAULT_ADDR=https://10.9.99.10:8200
+# export VAULT_CACERT=/etc/consul.d/tls/consul-agent-ca.pem
+# export VAULT_CLIENT_CERT=/etc/consul.d/tls/na2-client-vault-1.pem
+# export VAULT_CLIENT_KEY=/etc/consul.d/tls/na2-client-vault-1-key.pem
+# export VAULT_TOKEN=s.e7eXFKurWzvGQz4Ga7ViYtqt
+
+#hashiqube settings
+alias open-vault='open http://localhost:8200'
+alias open-nomad='open http://localhost:4646'
+alias open-consul='open http://localhost:8500'
+alias open-ptfe='open http://localhost:8800'
+alias open-hashiqube='open http://localhost:3333'
