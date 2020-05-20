@@ -181,3 +181,5 @@ alias gls='curl -s https://api.github.com/'
 alias monitor="htop && open -a Activity\ Monitor"
 alias tg='terragrunt'
 alias tf='terraform'
+
+alias history='fc -li'
