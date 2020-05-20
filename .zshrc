@@ -80,6 +80,7 @@ plugins=(aws
 		terraform
 		thefuck
 		vagrant
+		vault
 		vscode
 		z
   		zsh_reload
