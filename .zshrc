@@ -18,7 +18,8 @@ export ZSH="/Users/abuxton/.oh-my-zsh"
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="random"
 #ZSH_THEME="simple"
-ZSH_THEME="ys"
+#ZSH_THEME="ys"
+
 SHOW_AWS_PROMPT=true
 
 # Set list of themes to pick from when loading at random
@@ -132,6 +133,7 @@ export PATH="/usr/local/sbin:$PATH"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 test -x /usr/local/bin/archey && archey
 
+# typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/vault vault
 source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
