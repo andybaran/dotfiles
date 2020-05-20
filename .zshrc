@@ -82,8 +82,6 @@ plugins=(aws
 		vagrant
 		vscode
 		z
-		zsh-autosuggestions
-  		zsh-syntax-highlighting
   		zsh_reload
 		)
 export ZSH_PLUGINS=$plugins
