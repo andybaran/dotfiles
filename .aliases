@@ -183,3 +183,4 @@ alias tg='terragrunt'
 alias tf='terraform'
 
 alias history='fc -li'
+alias weather='curl http://wttr.in/'
