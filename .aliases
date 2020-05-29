@@ -172,8 +172,7 @@ alias osx-reset='killall Dock'
 alias open-code='code .'
 alias src='cd ~/src'
 alias abc-netstat='netstat tulpn'
-alias weather='curl wttr.in'
-alias weather-lon='curl wttr.in/London'
+alias weather='open http://wttr.in/London'
 alias glr="curl -s https://api.github.com/users/abuxton/repos | jq '.[]|.html_url\' "
 alias gls='curl -s https://api.github.com/'
 alias curli='curl -I' #get health responce header form curl
@@ -183,4 +182,3 @@ alias tg='terragrunt'
 alias tf='terraform'
 
 alias history='fc -li'
-alias weather='curl http://wttr.in/'
