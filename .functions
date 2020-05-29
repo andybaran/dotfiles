@@ -179,6 +179,5 @@ echo 'DevOps tools provide interfaces that communicate the capabilities the tool
 
 }
 function bootstrap() {
-	cd ~/dotfiles
-	sh ./bootstrap --force
+	sh ~/dotfiles/bootstrap --force
 }
