@@ -2,6 +2,7 @@
 eval "$(rbenv init -)"
 
 if [ gem which colorls ]; then
+# https://github.com/athityakumar/colorls#installation
   source $(dirname $(gem which colorls))/tab_complete.sh
   alias -g lc='colorls -lA --sd'
   alias -g ls='colorls -h --sd -1'
