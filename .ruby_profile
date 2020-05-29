@@ -7,6 +7,6 @@ else
   echo 'install gem colorls'
 fi
 alias -g lc='colorls -lA --sd'
-alias -g ls='colorsls -h --sd -1'
+alias -g ls='colorls -h --sd -1'
 alias -g l='colorls -A --sd'
 alias -g ll='colorls -A --sd -l'
