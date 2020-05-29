@@ -9,7 +9,7 @@ if [ gem which colorls ]; then
   alias -g l='colorls -A --sd'
   alias -g ll='colorls -A --sd -l'
   alias -g lgs='colorls -A --sd -l --gs'
-  alias -g lt='colorls --tree'
+  alias -g treecl='colorls --tree'
 else
   echo 'install gem colorls'
 fi
