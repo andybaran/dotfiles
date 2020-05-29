@@ -182,3 +182,6 @@ alias tg='terragrunt'
 alias tf='terraform'
 
 alias history='fc -li'
+alias ec="$EDITOR $HOME/.zshrc"
+# source ~/.zshrc
+alias sc="source $HOME/.zshrc"

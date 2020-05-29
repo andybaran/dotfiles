@@ -45,3 +45,6 @@ then
 fi
 
 alias tfp-filter='terraform plan | grep "#" '
+
+# bulk association
+alias -s {tf,tfvars,json,hcl}=code
