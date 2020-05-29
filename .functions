@@ -178,3 +178,7 @@ echo 'DevOps is about communicating share of capabilities and responsibilities'
 echo 'DevOps tools provide interfaces that communicate the capabilities the tool provides, and allow the user augment their capabilities and to communicate their responsibility for the tools usage'
 
 }
+function bootstrap() {
+	cd ~/dotfiles
+	sh ./bootstrap --force
+}
