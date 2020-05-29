@@ -3,12 +3,13 @@ eval "$(rbenv init -)"
 
 if [ gem which colorls ]; then
   source $(dirname $(gem which colorls))/tab_complete.sh
+  alias -g lc='colorls -lA --sd'
+  alias -g ls='colorls -h --sd -1'
+  alias -g l='colorls -A --sd'
+  alias -g ll='colorls -A --sd -l'
+  alias -g lgs='colorls -A --sd -l --gs'
+  alias -g lt='colorls --tree'
 else
   echo 'install gem colorls'
 fi
-alias -g lc='colorls -lA --sd'
-alias -g ls='colorls -h --sd -1'
-alias -g l='colorls -A --sd'
-alias -g ll='colorls -A --sd -l'
-alias -g lgs='colorls -A --sd -l --gs'
-alias -g lt='colorls --tree'
+
