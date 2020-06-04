@@ -32,11 +32,11 @@ terraform version
 # export VAULT_TOKEN=s.e7eXFKurWzvGQz4Ga7ViYtqt
 
 #hashiqube settings
-alias open-vault='open http://localhost:8200'
-alias open-nomad='open http://localhost:4646'
-alias open-consul='open http://localhost:8500'
-alias open-ptfe='open http://localhost:8800'
-alias open-hashiqube='open http://localhost:3333'
+alias hq-vault='open http://localhost:8200'
+alias hq-nomad='open http://localhost:4646'
+alias hq-consul='open http://localhost:8500'
+alias hq-tfe='open http://localhost:8800'
+alias hq-open='open http://localhost:3333'
 
 if [[ -x "/usr/local/bin/terraform-docs" ]]
 then
@@ -45,6 +45,9 @@ then
 fi
 
 alias tfp-filter='terraform plan | grep "#" '
+
+
+complete -C /usr/local/bin/consul consul
 
 # bulk association
 alias -s {tf,tfvars,json,hcl}=code
