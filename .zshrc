@@ -128,7 +128,7 @@ done;
 unset file;
 
 
-export PATH="~/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/bin:/usr/local/sbin:$PATH"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 test -x /usr/local/bin/archey && archey
