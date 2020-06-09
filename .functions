@@ -183,5 +183,5 @@ function bootstrap() {
 }
 
 function cheat() {
-	curl "cheat.sh/$@"
+	curl -q "cheat.sh/$@"
 }
