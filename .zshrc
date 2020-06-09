@@ -128,7 +128,7 @@ done;
 unset file;
 
 
-export PATH="/usr/local/sbin:$PATH"
+export PATH="~/bin:/usr/local/sbin:$PATH"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 test -x /usr/local/bin/archey && archey
@@ -137,6 +137,10 @@ test -x /usr/local/bin/archey && archey
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/vault vault
 source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
+
+# cheat.sh support
+fpath=(~/.zsh.d/ $fpath)
+export CHTSH_CONF='~/.cht.sh.conf'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
