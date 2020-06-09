@@ -183,5 +183,8 @@ function bootstrap() {
 }
 
 function cheat() {
+# https://github.com/chubin/cheat.sh
+
 	curl -q "cheat.sh/$@"
+# curl -q cos # https://github.com/chubin/cheat.sh/issues/80
 }
