@@ -184,4 +184,4 @@ alias ec="$EDITOR $HOME/.zshrc"
 # source ~/.zshrc
 alias sc="source $HOME/.zshrc"
 
-alias skip-pre-commit="echo '#skip=thething git commit -m \'example how to skip with pre-commit' "
+alias skip-pre-commit="echo '#skip=thething git commit -m example how to skip with pre-commit' "
