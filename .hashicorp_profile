@@ -51,3 +51,6 @@ complete -C /usr/local/bin/consul consul
 
 # bulk association
 alias -s {tf,tfvars,json,hcl}=code
+
+alias tg='terragrunt'
+alias tf='terraform'
