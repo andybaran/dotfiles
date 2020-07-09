@@ -22,3 +22,5 @@ function aws_credentials {
 	export AWS_SECRET_ACCESS_KEY=$(aws configure get ${AWS_PROFILE}.aws_secret_access_key)
 	echo $AWS_SECRET_ACCESS_KEY
 }
+
+alias aws_metadata='echo "# curl http://169.254.169.254/latest/meta-data/" '
