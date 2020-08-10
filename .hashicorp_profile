@@ -45,6 +45,7 @@ then
 fi
 
 alias tfp-filter='terraform plan | grep "#" '
+alias tfp-verbose='TF_LOG=trace terraform plan'
 
 # nomad -autocomplete-install
 complete -C /usr/local/bin/consul consul
