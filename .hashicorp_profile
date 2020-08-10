@@ -56,3 +56,6 @@ alias -s {tf,tfvars,json,hcl}=code
 
 alias tg='terragrunt'
 alias tf='terraform'
+
+# vagrant extras (ontop of OMZSH)
+alias vgs-prune='vgs --prune'
