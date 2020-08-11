@@ -62,3 +62,4 @@ alias tf='terraform'
 alias vgs-prune='vgs --prune'
 
 alias vault-api-help='echo "# vault <command> -output-curl-string" '
+alias vault-curl-help='open https://www.vaultproject.io/api-docs#help'
