@@ -1,0 +1,2 @@
+# Brew_profile for additional paths etc from Brew/Cask etc
+echo 'export PATH="/usr/local/opt/helm@2/bin:$PATH"'

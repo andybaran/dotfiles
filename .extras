@@ -25,6 +25,10 @@ if [ -f ~/.aws_profile ]; then
 # 	  echo "aws!"
 	source ~/.aws_profile
 fi
+if [[ -f ~/.brew_profile ]]; then
+#   echo "Brew!"
+   source ~/.brew_profile
+fi
 if [[ -f ~/.hashicorp_profile ]]; then
 #   echo "hashicorp!"
    source ~/.hashicorp_profile
