@@ -123,7 +123,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 for file in ~/.{path,exports,aliases,functions,extras}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+	[ -r "${file}" ] && [ -f "${file}" ] && source "${file}";
 done;
 unset file;
 
