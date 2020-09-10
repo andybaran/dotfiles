@@ -27,3 +27,5 @@ alias octoprint='open http://127.0.0.1:5000'
 #else
 #    echo "WARNING: Can't find virtualenvwrapper.sh"
 #fi
+
+alias pip-install="echo '# pip install ~/.pip_requirements' "
