@@ -18,3 +18,7 @@ fi
 if ! [ -x "$(command -v gom)" ]; then
   go get github.com/mattn/gom
 fi
+# https://github.com/brianshumate/hashii
+if ! [ -x "$(command -v hashii)" ]; then
+	go get -u github.com/brianshumate/hashii
+fi
