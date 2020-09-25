@@ -84,7 +84,6 @@ plugins=(aws
 		docker
 		git
 		helm
-		kubectl
 		terraform
 		thefuck
 		vagrant
