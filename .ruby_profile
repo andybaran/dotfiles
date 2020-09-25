@@ -3,7 +3,7 @@ eval "$(rbenv init -)"
 
 if [ -x "$(command -v colorls)" ]; then
 # https://github.com/athityakumar/colorls#installation
-  source $(dirname $(gem which colorls))/tab_complete.sh
+  #source $(dirname $(gem which colorls))/tab_complete.sh
   alias -g lc='colorls -lA --sd'
   alias -g ls='colorls -h --sd -1'
   alias -g l='colorls -A --sd'
@@ -16,4 +16,3 @@ if [ -x "$(command -v colorls)" ]; then
 else
   echo 'install gem colorls'
 fi
-
