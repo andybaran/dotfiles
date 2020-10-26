@@ -66,3 +66,5 @@ alias vault-curl-help='open https://www.vaultproject.io/api-docs#help'
 alias vault-auto-completion='echo "# vault -autocomplete-install" '
 alias doormat-help-acc='echo # doormat aws --account <aws-account> --tf-push --tf-organization <org> --tf-workspace <workspace>'
 alias hashicorp_downloads='echo  "https://releases.hashicorp.com/" '
+alias vault-flags-help='open https://www.vaultproject.io/docs/commands'
+alias vault-dev="echo '#export VAULT_ADDR=http://127.0.0.1:8200' && vault server -dev -dev-root-token-id=root "
