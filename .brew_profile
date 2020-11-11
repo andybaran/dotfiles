@@ -1,2 +1,4 @@
 # Brew_profile for additional paths etc from Brew/Cask etc
 export PATH="/usr/local/opt/helm@2/bin:$PATH"
+
+alias brew-dump='brew bundle dump --describe'
