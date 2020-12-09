@@ -148,7 +148,9 @@ PT=`env TZ=US/Pacific date`
 KR=`env TZ=Europe/Berlin date`
 IN=`env TZ=Asia/Kolkata date`
 UT=`env TZ=Etc/GMT date`
-echo “LA     $PT”
-echo “UTC    $UT”
-echo “Berlin $KR”
-echo “India  $IN”
+AU=`env TZ=AU/NSW date`
+echo “SFO:     $PT”
+echo “UTC:    $UT”
+echo “Berlin: $KR”
+echo “India:  $IN”
+echo “NSW:  $AU”
