@@ -143,3 +143,12 @@ export CHTSH_CONF='~/.cht.sh.conf'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+PT=`env TZ=US/Pacific date`
+KR=`env TZ=Europe/Berlin date`
+IN=`env TZ=Asia/Kolkata date`
+UT=`env TZ=Etc/GMT date`
+echo “LA     $PT”
+echo “UTC    $UT”
+echo “Berlin $KR”
+echo “India  $IN”
