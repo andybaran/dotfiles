@@ -155,6 +155,7 @@ alias gg="env GIT_SSL_NO_VERIFY=true"
 alias gb='export BRANCH=$(git rev-parse --abbrev-ref HEAD)'
 alias g="hub" #cos I is lazy!
 alias galias='cat ~/.gitconfig'
+alias git-delete='echo "#delete local git branch -d localBranchName  #delete remote git push origin --delete remoteBranchName" '
 alias cask="brew cask"
 alias newhope="telnet towel.blinkenlights.nl"
 alias abc-date='date +"%d-%m-%y" '
