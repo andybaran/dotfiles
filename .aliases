@@ -178,11 +178,9 @@ alias gls='curl -s https://api.github.com/'
 alias curli='curl -I' #get health responce header form curl
 # lazy admin
 alias monitor="htop && open -a Activity\ Monitor"
-
-
 alias history='fc -li'
 alias ec="$EDITOR $HOME/.zshrc"
 # source ~/.zshrc
 alias sc="source $HOME/.zshrc"
-
 alias skip-pre-commit="echo '#skip=thething git commit -m example how to skip with pre-commit' "
+alias gitsshtest='ssh -T git@github.com'
