@@ -71,11 +71,28 @@ alias tcpdump-vault="echo '# sudo tcpdump -A -s 0 'tcp dst port 8200 and (((ip[2
 alias vault-dev="echo '#export VAULT_ADDR=http://127.0.0.1:8200' && vault server -dev -dev-root-token-id=root "
 
 function vault_health () {
-	vault status
-  curl -k --header "X-Vault-Token: ${VAULT_TOKEN}"    'https://127.0.0.1:8200/v1/sys/config/state/sanitized' | jq
-  curl -k https://127.0.0.1:8200/v1/sys/health | jq
-  curl -k --header "X-Vault-Token: ${VAULT_TOKEN}"   'https://127.0.0.1:8200/v1/sys/metrics' | jq
-  curl -k --header "X-Vault-Token: ${VAULT_TOKEN}"   'https://127.0.0.1:8200/v1/sys/license' | jq
-  curl -k 'https://127.0.0.1:8200/v1/sys/replication/status' | jq
-  curl -k --header "X-Vault-Token: ${VAULT_TOKEN}"  'https://127.0.0.1:8200/v1/sys/storage/raft/configuration' | jq
+  if [[ -z "${VAULT_ADDR}" ]]; then
+    echo "# ensure the following exports are set: \n
+    # export VAULT_TOKEN=<token> \n
+    # export VAULT_CACERT=<path/to/cacert \n
+    # export VAULT_ADDR='127.0.0.1:8200' "
+
+  else
+
+    echo '# vault status'
+    vault status
+    echo '# curl -k --header "X-Vault-Token: ${VAULT_TOKEN}"    "https://${VAULT_ADDR}/v1/sys/config/state/sanitized" | jq '
+    curl -k --header "X-Vault-Token: ${VAULT_TOKEN}"    "https://${VAULT_ADDR}/v1/sys/config/state/sanitized" | jq
+    echo '# curl -k https://127.0.0.1:8200/v1/sys/health | jq '
+    curl -k https://127.0.0.1:8200/v1/sys/health | jq
+    echo '# curl -k --header "X-Vault-Token: ${VAULT_TOKEN}"   "https://${VAULT_ADDR}/v1/sys/metrics" | jq '
+    curl -k --header "X-Vault-Token: ${VAULT_TOKEN}"   "https://${VAULT_ADDR}/v1/sys/metrics" | jq
+    echo '# curl -k --header "X-Vault-Token: ${VAULT_TOKEN}"   "https://${VAULT_ADDR}/v1/sys/license" | jq '
+    curl -k --header "X-Vault-Token: ${VAULT_TOKEN}"   "https://${VAULT_ADDR}/v1/sys/license" | jq
+    echo '# curl -k 'https://127.0.0.1:8200/v1/sys/replication/status' | jq '
+    curl -k 'https://127.0.0.1:8200/v1/sys/replication/status' | jq
+    echo '# curl -k --header "X-Vault-Token: ${VAULT_TOKEN}"  "https://${VAULT_ADDR}/v1/sys/storage/raft/configuration" | jq '
+    curl -k --header "X-Vault-Token: ${VAULT_TOKEN}"  "https://${VAULT_ADDR}/v1/sys/storage/raft/configuration" | jq
+
+  fi
 }
