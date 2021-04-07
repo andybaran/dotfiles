@@ -22,3 +22,7 @@ fi
 if ! [ -x "$(command -v hashii)" ]; then
 	go get -u github.com/brianshumate/hashii
 fi
+# https://github.com/ericchiang/pup
+if ! [ -x "$(command -v pup)" ]; then
+	go get -u github.com/ericchiang/pup
+fi
