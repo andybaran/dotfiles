@@ -21,6 +21,10 @@ if [ -f ~/.ruby_profile ]; then
 #     echo "ruby!"
     source ~/.ruby_profile
 fi
+if [ -f ~/.instruqt_profile ]; then
+# 	  echo "instruqt!"
+	source ~/.instruqt_profile
+fi
 if [ -f ~/.aws_profile ]; then
 # 	  echo "aws!"
 	source ~/.aws_profile
