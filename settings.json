@@ -1,0 +1,52 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.autoSave": "afterDelay",
+    "terraform.indexing": {
+        "enabled": true,
+        "liveIndexing": false,
+        "delay": 500,
+        "exclude": [
+            ".terraform/**/*",
+            "**/.terraform/**/*"
+        ]
+    },
+    "terraform.languageServer": {
+        "external": true,
+        "args": [
+            "serve"
+        ]
+    },
+    "python.jediEnabled": false,
+    "git.enableSmartCommit": true,
+    "workbench.colorTheme": "Dracula.min",
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "python.pythonPath": "/usr/local/bin/python3",
+    "githubIssues.queries": [
+        {
+            "label": "My Issues",
+            "query": "default"
+        },
+        {
+            "label": "Created Issues",
+            "query": "author:${user} state:open repo:${owner}/${repository} sort:updated-desc"
+        }
+    ],
+    "python.languageServer": "Microsoft",
+    "editor.largeFileOptimizations": false,
+    "vs-kubernetes": {
+        "vs-kubernetes.minikube-path.mac": "/Users/andybaran/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+        "vscode-kubernetes.minikube-path.mac": "/Users/andybaran/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
+    },
+    "terminal.integrated.shell.osx": "zsh",
+    "go.toolsManagement.autoUpdate": true,
+    "breadcrumbs.enabled": false,
+    "editor.minimap.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.codeLens.recentChange.enabled": false,
+    "settingsSync.ignoredSettings": [
+    
+    ]
+}
