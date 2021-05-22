@@ -520,7 +520,7 @@
     "Blue Component" : 0.73333334922790527,
     "Red Component" : 0
   },
-  "Transparency" : 0.021662887101320877,
+  "Transparency" : 0,
   "Background Color" : {
     "Red Component" : 0.10000000000000001,
     "Color Space" : "sRGB",
@@ -529,6 +529,7 @@
     "Green Component" : 0.10000000000000001
   },
   "Screen" : -1,
+  "Initial Use Transparency" : false,
   "Bound Hosts" : [
 
   ],
@@ -541,11 +542,11 @@
   "Columns" : 80,
   "Unicode Normalization" : 0,
   "Visual Bell" : true,
-  "Custom Directory" : "No",
+  "ASCII Ligatures" : true,
   "Ansi 5 Color" : {
     "Green Component" : 0,
     "Blue Component" : 0.73333334922790527,
     "Red Component" : 0.73333334922790527
   },
-  "ASCII Ligatures" : true
+  "Custom Directory" : "No"
 }
