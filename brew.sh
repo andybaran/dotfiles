@@ -3,10 +3,10 @@
 # # Install command-line tools using Homebrew.
 
 # # Make sure we’re using the latest Homebrew.
-# brew update
+brew update
 
 # # Upgrade any already-installed formulae.
-# brew upgrade
+brew upgrade
 
 # # Save Homebrew’s installed location.
 # BREW_PREFIX=$(brew --prefix)
@@ -21,7 +21,7 @@
 # # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 # brew install findutils
 # # Install GNU `sed`, overwriting the built-in `sed`.
-# brew install gnu-sed --with-default-names
+# brew install gnu-sed
 # # Install a modern version of Bash.
 # brew install bash
 # brew install bash-completion2
@@ -33,16 +33,16 @@
 # fi;
 
 # # Install `wget` with IRI support.
-# brew install wget --with-iri
+brew install wget
 
 # # Install GnuPG to enable PGP-signing commits.
-# brew install gnupg
+brew install gnupg
 
 # # Install more recent versions of some macOS tools.
-# brew install vim --with-override-system-vi
-# brew install grep
-# brew install openssh
-# brew install screen
+brew install vim
+brew install grep
+brew install openssh
+brew install screen
 # brew install php
 # brew install gmp
 
@@ -67,7 +67,7 @@
 # brew install john
 # brew install knock
 # brew install netpbm
-# brew install nmap
+brew install nmap
 # brew install pngcheck
 # brew install socat
 # brew install sqlmap
@@ -76,7 +76,7 @@
 # brew install tcptrace
 # brew install ucspi-tcp # `tcpserver` etc.
 # brew install xpdf
-# brew install xz
+brew install xz
 
 # # Install other useful binaries.
 # brew install ack
@@ -87,15 +87,36 @@
 # brew install imagemagick --with-webp
 # brew install lua
 # brew install lynx
-# brew install p7zip
+brew install p7zip
 # brew install pigz
 # brew install pv
 # brew install rename
 # brew install rlwrap
-# brew install ssh-copy-id
+brew install ssh-copy-id
 # brew install tree
 # brew install vbindiff
 # brew install zopfli
 
+#### My additions
+brew install jq
+brew install svn
+brew tap homebrew/cask-versions
+brew tap homebrew/cask-fonts
+brew install font-fira-code font-fira-mono font-fira-mono-for-powerline font-fira-sans --cask
+brew install awscli
+brew install tldr
+brew install htop
+brew install thefuck
+brew install zsh-syntax-highlighting
+brew install terraform vault nomad consul packer
+brew install --cask slack
+brew install --cask 1password
+brew install --cask messenger
+brew install --cask spotify
+brew install --cask visual-studio-code-insiders
+brew install --cask istat-menus
+brew install azure-cli
+az extension add --name azure-devops
+
 # # Remove outdated versions from the cellar.
-# brew cleanup
+brew cleanup
