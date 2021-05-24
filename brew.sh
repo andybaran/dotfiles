@@ -100,6 +100,7 @@ brew install ssh-copy-id
 #### My additions
 brew install jq
 brew install svn
+brew install tmux
 brew tap homebrew/cask-versions
 brew tap homebrew/cask-fonts
 brew install font-fira-code font-fira-mono font-fira-mono-for-powerline font-fira-sans --cask
