@@ -110,6 +110,7 @@ brew install htop
 brew install thefuck
 brew install zsh-syntax-highlighting
 brew install terraform vault nomad consul packer
+brew install golang
 brew install --cask slack
 brew install --cask 1password
 brew install --cask messenger
