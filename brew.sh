@@ -41,7 +41,6 @@ brew install gnupg
 # # Install more recent versions of some macOS tools.
 brew install vim
 brew install grep
-brew install openssh
 brew install screen
 # brew install php
 # brew install gmp
@@ -100,6 +99,7 @@ brew install ssh-copy-id
 #### My additions
 brew install jq
 brew install svn
+brew install tmux
 brew tap homebrew/cask-versions
 brew tap homebrew/cask-fonts
 brew install font-fira-code font-fira-mono font-fira-mono-for-powerline font-fira-sans --cask
@@ -109,6 +109,7 @@ brew install htop
 brew install thefuck
 brew install zsh-syntax-highlighting
 brew install terraform vault nomad consul packer
+brew install golang
 brew install --cask slack
 brew install --cask 1password
 brew install --cask messenger
